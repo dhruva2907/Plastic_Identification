@@ -14,4 +14,5 @@ In the result, we can notice te given input on left , predicted output on right.
 The masked image contains white shade which indicated the plastic area of the image whereas black indicated non-plastic area.
 The accuracy of the model has been around 83%
 
-
+![Ouput_1](Figure_1.png)
+![Output_2](Figure_2.png)
