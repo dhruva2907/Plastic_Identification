@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# Specify the directory containing the images to rename
+directory="/home/dhruva/Desktop/VIT/Capstone/Datasets/Dataset/Images"
+
+# Specify the suffix to add to the filenames
+suffix="_raw"
+
+# Go to the directory
+cd "#!/bin/bash
+
+# Specify the directory containing the images to rename
+directory="/path/to/your/images"
+
+# Specify the suffix to add to the filenames
+suffix="_preprocessed"
+
+# Go to the directory
+cd "$directory"
+
+# Loop through all files in the directory
+for file in *; do
+    # Check if the file is a regular file
+    if [ -f "$file" ]; then
+        # Rename the file by adding the suffix
+        mv "$file" "${file%.*}$suffix.${file##*.}"
+    fi
+done
+
+In the script you provided:
+
+```bash
+#!/bin/bash
+
+# Specify the directory containing the images to rename
+directory="/path/to/your/images"
+
+# Specify the suffix to add to the filenames
+suffix="_preprocessed"
+
+# Go to the directory
+cd "$directory"
+
+# Loop through all files in the directory
+for file in *; do
+    # Check if the file is a regular file
+    if [ -f "$file" ]; then
+        # Rename the file by adding the suffix
+        mv "$file" "${file%.*}$suffix.${file##*.}"
+    fi
+done
+
+echo "Renaming complete."
+```
+
+The `directory` variable is where you specify the path to the directory containing the images you want to rename. It's the directory that the script will navigate to using `cd` before performing the renaming.
+
+In the script, you need to replace `"/path/to/your/images"` with the actual path to the directory where your images are located. For example:
+
+```bash
+directory="/home/your_username/Desktop/my_images"
+```
+
+This is the directory where the script will look for files to rename. The `cd "$directory"` command makes sure that the subsequent file operations are performed in that directory
