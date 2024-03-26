@@ -1,18 +1,22 @@
-Two files are created for simplification.
-First file(train_model.py) contains code of all the implementaions , training of model, importing dataset.
-Second file(explore_model.py) conatins code of runinng the trained  model , pre-processing images of gicen dataset, classifiying new images as plastic / glass which is the main purpose. 
-Dataset is provided which contains 204 images of glass objects and 200 images of plastic making a toal of 404 images(raw images)
-All the images are pre-processed by Python Imaging Library(PIL) and the pre-processed are stored in the folder.
-Now, the dataset is split into 80:20 , First 5 images are printed for debugging purposes.
-Once the dataset is ready , it is trained using a machine learning model.
-A CNN model , U-NET has been used to train the model.
-After training the model, its accuracy , f1 score is caluclated (using true tables). 
-The trained model is saved in a standard hd5 file . 
-New we provide an input of a picture we want to classify 
-'Matplotlib' is used to visualize the result.
-In the result, we can notice te given input on left , predicted output on right.
-The masked image contains white shade which indicated the plastic area of the image whereas black indicated non-plastic area.
-The accuracy of the model has been around 83%
+**Plastic and Glass Image Classification**
+This project aims to classify images of plastic and glass objects using a Convolutional Neural Network (CNN) model. The implementation consists of two main files: train_model.py and explore_model.py.
 
-![Ouput_1](Figure_1.png)
+**Files Description**
+train_model.py: This file contains the implementation of model training, dataset import, and all necessary preprocessing steps. The dataset provided consists of 204 images of glass objects and 200 images of plastic, totaling 404 raw images. All images undergo preprocessing using the Python Imaging Library (PIL), and the processed images are stored in a designated folder.
+
+explore_model.py: This file contains the code for running the trained model. It handles preprocessing of new input images and performs classification. The main purpose of this file is to classify new images as either plastic or glass.
+
+**Dataset Preparation**
+The provided dataset is split into an 80:20 ratio for training and validation purposes. The initial five images are printed for debugging and verification purposes.
+
+**Model Training**
+The model is trained using a U-Net CNN architecture. After training, the model's accuracy and F1 score are calculated using true tables. The trained model is saved in a standard HDF5 file format for future use.
+
+**Result Visualization**
+The result of the model classification is visualized using Matplotlib. The output includes the input image on the left and the predicted output on the right. The masked image highlights plastic areas with white shading, while non-plastic areas are indicated in black.
+
+**Model Performance**
+The accuracy of the trained model is approximately 83%.
+
+
 ![Output_2](Figure_2.png)
